@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class objectdetect : MonoBehaviour
 {
-    
+    public Material red;
     void Start()
     {
         
@@ -19,7 +19,14 @@ public class objectdetect : MonoBehaviour
 
         if (Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit, Mathf.Infinity)) 
         {
-            Get          
+            red = hit.transform.gameObject.tag == "red";
+
+
+
+
+
+
+
         }
     }
 }
